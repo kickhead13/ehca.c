@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 == 'set' ]]; then
+	curl localhost:8081/set/${2}/${3}
+elif [[ $1 == 'get' ]]; then
+	curl localhost:8082/get/${2}
+else
+	ehco "UNKNOW OPERATION"
+fi
